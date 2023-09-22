@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <title>Document</title>
+    <!--font kit-->
+    <script src="https://kit.fontawesome.com/aba5285ab8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <style>
+        body {
+            background: url('{% static "img/Roseanna.jpg" %}');
+        }
+
+        .main {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent),
+            url('{% static "img/naturephot.webp" %}');
+        }
+    </style>
+</head>
+
+<body">
+
+    <div class="main">
+        <nav>
+            <label for="btn-2" class="icon">
+                <span class="fa fa-bars"></span>
+            </label>
+            <input type="checkbox" id="btn-2">
+            <ul>
+                <li><a href="{% url 'home' %}">Services</a></li>
+                <li><a href="{% url 'equip' %}">Equipments</a> </li>
+                <li><a href="{% url 'd_login' %}">Login</a></li>
+                <li><a href="{% url 'booknow' %}">Booknow</a></li>
+            </ul>
+        </nav>
+
+        <div class="text-box">
+            <h1>STUDIOCODE</h1>
+            <P>We can freeze ypor happy moments with one click</P>
+        </div>
+
+    </div><br>
+
+
+
+    {% block content %}
+
+
+    {% endblock %}
+
+
+    <!--javascript file source-->
+    <script src="{% static 'styles/java.js' %}"></script>
+    <!--javascript file source-->
+    <script src="{% static 'styles/reveal.js' %}"></script>
+    <script src="{% static 'styles/hamberger.js' %}"></script>
+
+    
+    
+
+    <footer>
+        <div class="foote">
+            <div class="foot side">
+                <h4><u>Connect with us</u></h4>
+                <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+
+            <div class="foot side">
+                <h4><u>call us</u></h4>
+                <p>8318 1942 64</p>
+                <p>8381 1942 64</p>
+            </div>
+
+            <div class="foot">
+                <h4><u>Address</u></h4>
+                <p>Studio Code,</p>
+                <p>123 Berry Lane,</p>
+                <p>UNIT B,</p>
+                <p>kochi</p>
+            </div>
+        </div>
+
+
+        <a href="">Terms & conditions</a><a href="">Privacy & Policies</a>
+        <p>All rights reserved</p>
+    </footer>
+    </body>
+
+</html>

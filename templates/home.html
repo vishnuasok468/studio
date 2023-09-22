@@ -1,166 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
 
-<head>
-    {% load static %}
-    <title>Document</title>
-    <!--font kit-->
-    <script src="https://kit.fontawesome.com/aba5285ab8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
-    <style>
-        body {
-            background: url('{% static "img/Roseanna.jpg" %}');
-        }
-
-        .main {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent),
-            url('{% static "img/naturephot.webp" %}');
-        }
-    </style>
-</head>
-
-<body">
-    <div class="main">
-        <nav>
-            <ul>
-                <li><a href="">Login</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">BookNow</a></li>
-            </ul>
-        </nav>
-        <div class="text-box">
-            <h1>STUDIOCODE</h1>
-            <P>We can freeze ur happiness with a single click</P>
+<div class="carosel reveal">
+    <div class="slider-wrapper">
+        <button id="prev-slide" class="slide-btn"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="image-list">
+            <img src="{% static 'img/beach-photoshoot.jpeg' %}" alt="" class="image-item">
+            <img src="{% static 'img/couples.jpg' %}" alt="" class="image-item">
+            <img src="{% static 'img/intimate-Wedding.jpg' %}" alt="" class="image-item">
+            <img src="{% static 'img/keralawedding.jpg' %}" alt="" class="image-item">
+            <img src="{% static 'img/Product-Photography-Ideas.jpg' %}" alt="" class="image-item">
+            <img src="{% static 'img/Tree-New.jpg' %}" alt="" class="image-item">
         </div>
-    </div><br>
-    <div class="anime">
-        <div class="carosel">
-            <div class="slider-wrapper">
-                <button id="prev-slide" class="slide-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                <div class="image-list">
-                    <img src="{% static 'img/beach-photoshoot.jpeg' %}" alt="" class="image-item">
-                    <img src="{% static 'img/couples.jpg' %}" alt="" class="image-item">
-                    <img src="{% static 'img/intimate-Wedding.jpg' %}" alt="" class="image-item">
-                    <img src="{% static 'img/keralawedding.jpg' %}" alt="" class="image-item">
-                    <img src="{% static 'img/Product-Photography-Ideas.jpg' %}" alt="" class="image-item">
-                    <img src="{% static 'img/Tree-New.jpg' %}" alt="" class="image-item">
-                </div>
-                <button id="next-slide" class="slide-btn"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
-            <div class="slider-scrollbar">
-                <div class="scrollbar-track">
-                    <div class="scrollbar-thumb"></div>
-                </div>
-            </div>
+        <button id="next-slide" class="slide-btn"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="slider-scrollbar">
+        <div class="scrollbar-track">
+            <div class="scrollbar-thumb"></div>
         </div>
+    </div>
+</div>
 
-        <div class="special">
-            <h2>We are Exciting to Do..</h2>
-            <div class="content">
-                <div class="contents">
-                    <img src="{% static 'img/Wedding.jpeg' %}" alt="">
-                </div>
-                <div class="contents desc">
-                    <h3>Wedding Photography</h3>
-                    <p>Being a professional wedding photographer involves an exciting mix of portraiture and event
-                        photography in a wide variety of settings and groups. Wedding photography is pretty intense,
-                        with
-                        the element of getting the best shot on the first try and not really getting a second chance in
-                        some
-                        situations. The emphasis is on capturing the moment and documenting natural, candid pictures
-                        that
-                        the family will treasure for a lifetime. </p>
-
-                </div>
-            </div>
-            <div class="content">
-                <div class="contents">
-                    <img src="{% static 'img/Event.jpg' %}" alt="">
-                </div>
-                <div class="contents desc">
-                    <h3>Event Photography</h3>
-                    <p>In the same vein, event photography is a dynamic and fast-paced way to make a buck with your
-                        camera.
-                        Whether your beat is corporate events or wild and crazy rock concerts, event photographers work
-                        in a
-                        variety of settings. Event photography styles often involve a mixture of photojournalistic
-                        documentary work and portraiture. Some organizations use their event photos for publicity
-                        purposes,
-                        while other use party photos as souvenirs or keepsakes. </p>
-                </div>
-            </div>
-            <div class="content">
-                <div class="contents">
-                    <img src="{% static 'img/portrait.jpg' %}" alt="">
-                </div>
-                <div class="contents desc">
-                    <h3>Portrait Photography</h3>
-                    <p>Portraiture is one of the most common types of photographer that we think of when we consider
-                        career
-                        options. The kinds of photography that can be included in portraits is astounding. Retail
-                        customers
-                        seek out portrait photographers for every phase of life: maternity and newborns, school photos,
-                        senior photos, and general family photos. Corporate portraits are also commonly needed as
-                        employees
-                        update their headshots for websites and publicity materials. Furthermore, aspiring and
-                        professional
-                        models are in constant need of updated portfolios with a catalog of current shots to market
-                        themselves for agencies and jobs. </p>
-
-                </div>
-            </div>
-            <div class="content">
-                <div class="contents">
-                    <img src="{% static 'img/product.jpg' %}" alt="">
-                </div>
-                <div class="contents desc">
-                    <h3>Product Photography</h3>
-                    <p>1234Product photography covers a lot of ground. Food photography is a specialized niche, and
-                        restaurants
-                        need to advertise their meals and create their menus. Jewelry is another favorite type of
-                        product
-                        photography since this requires the perfect balance of light and preparation. While some product
-                        shoots might involve models, many times you will be working solo in a studio doing still life
-                        photographs of small objects. </p>
-                </div>
-            </div>
-            <div class="content">
-                <div class="contents">
-                    <img src="{% static 'img/product.jpg' %}" alt="">
-                </div>
-                <div class="contents desc">
-                    <h3>Product Photography</h3>
-                    <p>1234Product photography covers a lot of ground. Food photography is a specialized niche, and
-                        restaurants
-                        need to advertise their meals and create their menus. Jewelry is another favorite type of
-                        product
-                        photography since this requires the perfect balance of light and preparation. While some product
-                        shoots might involve models, many times you will be working solo in a studio doing still life
-                        photographs of small objects. </p>
-                </div>
-            </div>
-            <button class="learn-more">
-                <span class="circle" aria-hidden="true">
-                    <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">More</span>
-            </button>
+<div class="special reveal">
+    <h2>We are Exciting to Do..</h2>
+    <div class="content reveal">
+        <div class="contents">
+            <img src="{% static 'img/Wedding.jpeg' %}" alt="">
+        </div>
+        <div class="contents desc">
+            <h3>Wedding Photography</h3>
+            <p>Being a professional wedding photographer involves an exciting mix of portraiture and event
+                photography in a wide variety of settings and groups. Wedding photography is pretty intense,
+                with
+                the element of getting the best shot on the first try and not really getting a second chance in
+                some
+                situations. The emphasis is on capturing the moment and documenting natural, candid pictures
+                that
+                the family will treasure for a lifetime. </p>
 
         </div>
     </div>
-    <br>
+    <div class="content reveal">
+        <div class="contents">
+            <img src="{% static 'img/Event.jpg' %}" alt="">
+        </div>
+        <div class="contents desc">
+            <h3>Event Photography</h3>
+            <p>In the same vein, event photography is a dynamic and fast-paced way to make a buck with your
+                camera.
+                Whether your beat is corporate events or wild and crazy rock concerts, event photographers work
+                in a
+                variety of settings. Event photography styles often involve a mixture of photojournalistic
+                documentary work and portraiture. Some organizations use their event photos for publicity
+                purposes,
+                while other use party photos as souvenirs or keepsakes. </p>
+        </div>
+    </div>
+    <div class="content reveal">
+        <div class="contents">
+            <img src="{% static 'img/portrait.jpg' %}" alt="">
+        </div>
+        <div class="contents desc">
+            <h3>Portrait Photography</h3>
+            <p>Portraiture is one of the most common types of photographer that we think of when we consider
+                career
+                options. The kinds of photography that can be included in portraits is astounding. Retail
+                customers
+                seek out portrait photographers for every phase of life: maternity and newborns, school photos,
+                senior photos, and general family photos. Corporate portraits are also commonly needed as
+                employees
+                update their headshots for websites and publicity materials. Furthermore, aspiring and
+                professional
+                models are in constant need of updated portfolios with a catalog of current shots to market
+                themselves for agencies and jobs. </p>
 
-    <footer>
-        <h4>Connect with us</h4>
-        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-        <a href=""><i class="fa-brands fa-instagram"></i></a>
-        <a href=""><i class="fa-brands fa-facebook"></i></a>
-        <a href=""><i class="fa-brands fa-linkedin"></i></a>
-    </footer>
+        </div>
+    </div>
+    <div class="content reveal">
+        <div class="contents">
+            <img src="{% static 'img/product.jpg' %}" alt="">
+        </div>
+        <div class="contents desc">
+            <h3>Product Photography</h3>
+            <p>1234Product photography covers a lot of ground. Food photography is a specialized niche, and
+                restaurants
+                need to advertise their meals and create their menus. Jewelry is another favorite type of
+                product
+                photography since this requires the perfect balance of light and preparation. While some product
+                shoots might involve models, many times you will be working solo in a studio doing still life
+                photographs of small objects. </p>
+        </div>
+    </div>
+    <button class="learn-more">
+        <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">More</span>
+    </button>
+</div>
+<br>
 
 
-    <!--javascript file source-->
-    <script src="{% static 'styles/java.js' %}"></script>
-    </body>
+{% for i in messages %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script>
+    var m = "{{i}}";
+    Swal.fire({
+        icon: 'info',
+        text: m
+    }
+    )
+</script>
+{% endfor %}
 
-</html>
+<!--javascript file source-->
+<script src="{% static 'styles/reveal.js' %}"></script>
+
+{% endblock %}

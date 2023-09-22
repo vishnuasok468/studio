@@ -7,12 +7,6 @@
     font-family: 'poppins', sans-serif;
 }
 
-.anime{
-    width: 100%;
-    height: 100%;
-    
-}
-
 .carosel {
     max-width: 1200px;
     width: 95%;
@@ -114,7 +108,7 @@
     bottom: -10px;
 }
 
-.main{
+.main {
     width: 100%;
     height: 600px;
     background-size: cover;
@@ -122,52 +116,56 @@
     position: relative;
 }
 
-.main nav{
-    display: flex;
+nav {
     width: 100%;
     align-items: center;
+    padding: 5px 0;
+}
+
+nav ul {
+    display: flex;
     flex-wrap: wrap;
-    padding: 1rem 0;
-}
-
-nav ul{
-    flex: 1;
+    justify-content: end;
     text-align: right;
-    padding-right: 4rem;
+    padding-right: 30px;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
     list-style: none;
-    margin: 1rem 2rem;
+    margin: 10px 30px;
 }
 
-nav ul li a{
+nav ul li a {
     color: #fff;
     text-decoration: none;
     position: relative;
 }
-nav ul li a::after{
+
+nav ul li a::after {
     content: '';
     width: 0;
-    height:3px;
+    height: 3px;
     position: absolute;
-    bottom:-5px;
+    bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
-    background:#fff;
+    background: #fff;
     transition: width 0.3s;
 }
-nav ul li a:hover::after{
+
+nav ul li a:hover::after {
     width: 50%;
 }
 
-.main .text-box{
+
+.main .text-box {
     color: #fff;
-    position:absolute;
+    position: absolute;
     bottom: 8%;
 }
-.text-box h1{
+
+.text-box h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 6rem;
     line-height: 160px;
@@ -175,19 +173,19 @@ nav ul li a:hover::after{
     color: transparent;
     -webkit-text-stroke: 1px #fff;
     background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
-    -webkit-background-clip:text ;
+    -webkit-background-clip: text;
     background-position: 0 0;
     animation: back 20s linear infinite;
 }
 
-@keyframes back{
-    100%{
+@keyframes back {
+    100% {
         background-position: 2000px 0;
     }
 }
 
 
-.text-box p{
+.text-box p {
     font-size: 50px;
     font-weight: 600;
 }
@@ -310,19 +308,52 @@ button:hover .button-text {
 footer {
     width: 100%;
     background: #000;
-    height: 30vh;
     text-align: center;
+    padding: 3rem;
 }
 
-footer a {
+footer .foote {
+    display: flex;
+    place-content: center;
+    width: 100%;
+}
+
+footer .foot {
+    width: 50%;
+    padding: 2rem;
+}
+
+footer .side {
+    border-right: solid 1px #fff;
+
+}
+
+footer .foote a {
     font-size: 2rem;
     padding: 1.5rem;
     color: #fff;
 }
 
-footer h4{
+footer a {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 1rem;
+}
+
+footer a:hover {
+    color: rgb(145, 145, 54);
+}
+
+footer h4 {
     color: #fff;
 }
+
+footer p {
+    color: #fff;
+}
+
+
 
 @media (max-width:986px) {
     .special .content {
@@ -335,4 +366,81 @@ footer h4{
         margin: 1px;
     }
 
+    button .button-text {
+        font-size: 20px;
+    }
+
+    footer .foote {
+        display: grid;
+        flex: none;
+
+    }
+
+    footer .foot {
+        width: 100%;
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    footer .side {
+        border: none;
+    }
+
+
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+input[type="checkbox"],
+.icon {
+    display: none;
+}
+
+@media (max-width:986px) {
+    nav ul {
+        margin-left: 0;
+        float: left;
+        width: 100%;
+    }
+
+
+    nav ul li {
+        margin-left: 0;
+        display: block;
+        width: 100%;
+    }
+
+    .icon {
+        display: block;
+        color: white;
+        position: absolute;
+        right: 40px;
+        line-height: 70px;
+        font-size: 5rem;
+        cursor: pointer;
+    }
+
+
+    nav ul {
+        display: none;
+        
+    }
+    nav ul li a{
+        right: 7rem;
+        font-size: 2rem;
+    }
+
+    [id^=btn-2]:checked+ul {
+        display: block;
+    }
 }
