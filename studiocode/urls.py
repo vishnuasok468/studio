@@ -10,5 +10,7 @@ urlpatterns = [
     path('reg',views.reg,name='reg'),
     path('equip',views.equip,name='equip'),
     path('booknow',views.booknow,name='booknow'),
+    path('booknowbtn',views.booknowbtn,name='booknowbtn'),
+    path('about',views.about,name='about'),
 
 ]

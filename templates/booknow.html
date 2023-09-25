@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
+
 <link rel="stylesheet" href="{% static 'styles/style.css' %}">
 <style>
-    .contact-form {
+        .contact-form {
         margin: 2rem 15rem;
         background-color: #f2f2f2;
         padding: 20px;
@@ -31,11 +32,6 @@
         margin-bottom: 10px;
     }
 
-    textarea {
-        resize: none;
-        height: 80px;
-        width: 100%;
-    }
 
     .contact-form input,
     .contact-form textarea {
@@ -47,7 +43,7 @@
 
     .contact-form input:focus,
     .contact-form textarea:focus {
-     
+        outline: none;
         box-shadow: 0 0 5px #ff6384;
     }
 
@@ -88,8 +84,8 @@
             font-size: 3rem;
         }
 
-        .contact-form input,
-        .contact-form textarea {
+        .contact-form input
+         {
             padding: 30px;
             font-size: 3rem;
         }
@@ -133,22 +129,20 @@
     [id^=btn-2]:checked+ul {
         display: block;
     }
+    
 }
 </style>
 
 <div class="contact-form">
-    <span class="heading">Sign up</span>
-    <form action="{% url 'reg' %}">
-        <label>Name:</label>
-        <input type="Name" required="">
-        <label>Email ID:</label>
-        <input type="email" name="email" required="">
-        <label>password:</label>
-        <input type="password" required="">
-        <label>confirm Password:</label>
-        <input type="password" required="">
-        <button type="submit">Login</button>
-        <p>Don't have account? <a href="{% url 'd_login' %}">Login</a></p>
+    <span class="heading">Book here..</span>
+    <form action="{% url 'booknowbtn' %}">
+        <label for="name">Event</label>
+        <input type="text" required="">
+        <label for="email">Date</label>
+        <input type="date" name="date" required="">
+        <label>Venue Address</label>
+        <textarea cols="30" rows="5"></textarea>
+        <button type="submit">Book now</button>
     </form>
 </div>
 
@@ -157,15 +151,11 @@
 <script>
     var m = "{{i}}";
     Swal.fire({
-        icon: 'success',
+        icon: 'info',
         text: m
     }
     )
 </script>
 {% endfor %}
-
-
-<!--javascript file source-->
-<script src="{% static 'styles/reveal.js' %}"></script>
 
 {% endblock %}

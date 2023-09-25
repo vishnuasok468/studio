@@ -114,6 +114,7 @@
     background-size: cover;
     background-position: center;
     position: relative;
+
 }
 
 nav {
@@ -156,13 +157,6 @@ nav ul li a::after {
 
 nav ul li a:hover::after {
     width: 50%;
-}
-
-
-.main .text-box {
-    color: #fff;
-    position: absolute;
-    bottom: 8%;
 }
 
 .text-box h1 {
@@ -356,14 +350,10 @@ footer p {
 
 
 @media (max-width:986px) {
+
     .special .content {
         display: grid;
         flex: none;
-    }
-
-    .special .content .contents {
-        width: 100%;
-        margin: 1px;
     }
 
     button .button-text {
@@ -386,7 +376,6 @@ footer p {
         border: none;
     }
 
-
 }
 
 .reveal {
@@ -406,41 +395,105 @@ input[type="checkbox"],
     display: none;
 }
 
+
+/* form styling*/
+
+.contact-form {
+    margin: 2rem 15rem;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-form label {
+    color: black;
+}
+
+.contact-form .heading {
+    font-size: 3vw;
+    color: black;
+    margin-bottom: 12px;
+    font-weight: bold;
+    display: block;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 10px;
+}
+
+textarea {
+   
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #ff6384;
+}
+
+.contact-form button[type="submit"] {
+    background-color: #ff6384;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form p {
+    padding: 1rem 0;
+}
+
+.contact-form a {
+    text-decoration: none;
+    color: black;
+}
+
+.contact-form a:hover {
+    border-bottom: solid #000 1px;
+}
+
 @media (max-width:986px) {
-    nav ul {
-        margin-left: 0;
-        float: left;
-        width: 100%;
+    .contact-form {
+        margin: 1rem;
+        min-width: fit-content;
     }
 
-
-    nav ul li {
-        margin-left: 0;
-        display: block;
-        width: 100%;
+    .contact-form .heading {
+        font-size: 4rem;
     }
 
-    .icon {
-        display: block;
-        color: white;
-        position: absolute;
-        right: 40px;
-        line-height: 70px;
-        font-size: 5rem;
-        cursor: pointer;
+    .contact-form form label {
+        font-size: 3rem;
     }
 
-
-    nav ul {
-        display: none;
-        
+    .contact-form input,
+    .contact-form textarea {
+        padding: 30px;
+        font-size: 3rem;
     }
-    nav ul li a{
-        right: 7rem;
+
+    .contact-form button[type="submit"] {
+        font-size: 3rem;
+    }
+
+    .contact-form p {
         font-size: 2rem;
     }
-
-    [id^=btn-2]:checked+ul {
-        display: block;
-    }
 }
+

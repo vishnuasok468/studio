@@ -24,5 +24,11 @@ def equip(request):
     return render (request,'equipments.html')
 
 def booknow(request):
-    messages.info(request,'Login Required!!')
-    return redirect('home')
+    return render(request,'booknow.html')
+
+def booknowbtn(request):
+    messages.info(request,'Login Required')
+    return redirect('booknow')
+
+def about(request):
+    return render(request,'about.html')

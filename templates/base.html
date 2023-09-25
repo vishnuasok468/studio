@@ -16,6 +16,52 @@
             background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent),
             url('{% static "img/naturephot.webp" %}');
         }
+
+        .main .text-box {
+            color: #fff;
+            position: absolute;
+            bottom: 5%;
+            z-index: 1;
+
+        }
+        nav ul{
+            z-index: 1000;
+        }
+        @media (max-width:986px) {
+    nav ul li {
+        margin-left: 0;
+        display: block;
+    }
+
+    .icon {
+        display: block;
+        color: white;
+        position: absolute;
+        right: 40px;
+        line-height: 70px;
+        font-size: 5rem;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+
+    nav ul {
+        display: none;
+        background-color: #b12a5b;
+        position: relative;
+    }
+
+    nav ul li a {
+        right: 7rem;
+        font-size: 5rem;
+        line-height: 250px;
+    }
+
+    [id^=btn-2]:checked+ul {
+        display: block;
+    }
+}
+        
     </style>
 </head>
 
@@ -30,6 +76,7 @@
             <ul>
                 <li><a href="{% url 'home' %}">Services</a></li>
                 <li><a href="{% url 'equip' %}">Equipments</a> </li>
+                <li><a href="{% url 'about' %}">About us</a></li>
                 <li><a href="{% url 'd_login' %}">Login</a></li>
                 <li><a href="{% url 'booknow' %}">Booknow</a></li>
             </ul>
@@ -37,7 +84,7 @@
 
         <div class="text-box">
             <h1>STUDIOCODE</h1>
-            <P>We can freeze ypor happy moments with one click</P>
+            <P>We can freeze your happy moments with one click</P>
         </div>
 
     </div><br>
@@ -56,8 +103,8 @@
     <script src="{% static 'styles/reveal.js' %}"></script>
     <script src="{% static 'styles/hamberger.js' %}"></script>
 
-    
-    
+
+
 
     <footer>
         <div class="foote">

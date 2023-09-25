@@ -2,6 +2,92 @@
 {% block content %}
 {% load static %}
 
+<style>
+    .workflow {
+        margin: 2rem;
+        text-align: center;
+        border: solid 1px pink;
+    }
+
+    .workflow h1 {
+        margin: 1rem 0;
+    }
+
+    .workflow .content {
+        display: flex;
+    }
+
+    .workflow .content img {
+        width: 550px;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .workflow .content .desc {
+        width: 50%;
+        margin: auto;
+    }
+
+    .workflow .content .desc .list {
+        display: flex;
+        margin: 0 5rem;
+    }
+
+    .workflow .content .desc .list ul {
+        padding: 3rem;
+        text-align: center;
+        list-style: none;
+    }
+
+    .workflow .content .desc span {
+        color: white;
+        font-size: 3rem;
+    }
+
+    @media (max-width:986px) {
+        .workflow .content {
+            flex: none;
+            display: grid;
+        }
+
+        .workflow .content .desc {
+            width: 100%;
+        }
+
+        .workflow .content .desc img {
+            width: 100%;
+            height: 100%;
+        }
+        .special .content .contents {
+            width: 100%;
+            height: auto;
+            margin: 1px;
+        }
+
+
+        .special .content .contents img {
+            width: 100%;
+            height: auto;
+        }
+
+        .workflow img {
+            width: 100%;
+            height: auto;
+        }
+
+        .workflow .content .desc .list {
+            display: block;
+            flex: none;
+            margin: 0 1rem;
+        }
+
+        .workflow .content .desc .list i {
+            padding: 30px;
+        }
+
+    }
+</style>
+
 <div class="carosel reveal">
     <div class="slider-wrapper">
         <button id="prev-slide" class="slide-btn"><i class="fa-solid fa-chevron-left"></i></button>
@@ -59,7 +145,7 @@
     </div>
     <div class="content reveal">
         <div class="contents">
-            <img src="{% static 'img/portrait.jpg' %}" alt="">
+            <img src="{% static 'img/portrait.jpg' %}" alt="" class="img">
         </div>
         <div class="contents desc">
             <h3>Portrait Photography</h3>
@@ -92,7 +178,7 @@
                 photographs of small objects. </p>
         </div>
     </div>
-    <button class="learn-more">
+    <button class="learn-more reveal">
         <span class="circle" aria-hidden="true">
             <span class="icon arrow"></span>
         </span>
@@ -101,6 +187,51 @@
 </div>
 <br>
 
+<div class="workflow reveal">
+    <h1>The Modern Workflow</h1>
+    <p>Welcome to the new age of digital delivery. No DVDs, no USB drives. Instant digital download for all.</p>
+    <img src="{% static 'img/DIGITALDELIVERY.png' %}" alt="">
+
+    <div class="content reveal">
+        <div class="desc">
+            <img src="{% static 'img/index.png' %}" alt="">
+        </div>
+        <div class="desc">
+            <h2>Deliver via <span>Download</span></h2>
+            <p>Allow clients to download their photos directly from your professional gallery.</p>
+            <div class="list">
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Fast & Secure</li>
+                    <li><i class="fa-solid fa-check"></i> Track Who and When</li>
+                </ul>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Full control on sizes</li>
+                    <li><i class="fa-solid fa-check"></i> Delivery to/from anywhere</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="content reveal">
+        <div class="desc">
+            <h2><span>Favorite</span> Way to Proof</h2>
+            <p>Speed up your online proofing workflow with the Favorite system.</p>
+            <div class="list">
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Track client favorites</li>
+                    <li><i class="fa-solid fa-check"></i> Export filenames</li>
+                </ul>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Download client favorites</li>
+                    <li><i class="fa-solid fa-check"></i> Share favorites</li>
+                </ul>
+            </div>
+        </div>
+        <div class="desc">
+            <img src="{% static 'img/index-w.png' %}" alt="">
+        </div>
+    </div>
+</div>
 
 {% for i in messages %}
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>

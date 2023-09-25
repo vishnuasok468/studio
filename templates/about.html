@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<style>
+    @media (max-width:986px) {
+        .special .content .contents {
+            width: 100%;
+            height: auto;
+            margin: 1px;
+        }
+        .special .content .contents img {
+            width: 100%;
+            height: auto;
+        }
+    }
+</style>
+
+
+
+<div class="special reveal">
+    <h2>About us</h2>
+    <div class="content reveal">
+
+        <div class="contents desc">
+            <h3>Our story</h3>
+            <p>In 2013, our founding team members – made up of photographers level Amateur to Pro – were looking for a
+                simple and beautiful way to share photos with friends and clients. Back then, the existing online
+                gallery hosting systems required too much technical know-how, or were simply not pleasing to look at. We
+                soon realized that many other photographers were also in need of a design-centric, hassle-free gallery
+                platform, and Pixieset was born.
+
+                Today, we're a profitable, privately-owned company that focuses on making photography software simpler
+                and better. Over the coming years, we will be leading the charge in creating innovative products that
+                empower photography businesses so photographers can focus on what they do best: capturing memories.
+            </p>
+        </div>
+        <div class="contents">
+            <img src="{% static 'img/photographers w.jpg' %}" alt="">
+        </div>
+    </div>
+    <div class="content reveal">
+        <div class="contents">
+            <img src="{% static 'img/te.jpg' %}" alt="">
+        </div>
+        <div class="contents desc">
+            <h3>Our Culture & Values</h3>
+            <p>We are creators first, business-people second. We are constantly creating and refining our products with
+                care and focus. These are some of the values that we live by and pride ourselves in.
+            <ul>
+                <li>Craftsmanship at the heart of everything</li>
+                <li>Simple solutions to complex challenges.</li>
+                <li>Build a positive and happy environment.</li>
+                <li>Do the right thing and produce awesome work.</li>
+                <li>Communicate with honesty and respect.</li>
+                <li>Focus on growth and learning.</li>
+                <li>Live smart, and have fun. </li>
+            </ul>
+            </p>
+        </div>
+    </div>
+    <div class="content reveal">
+
+        <div class="contents desc">
+            <h3>Small Team.Big Impact</h3>
+            <p>The Studiocode team is a small, tight-knit group of talented individuals. No matter if you are a Cameraman,
+                Editor, or a Light Technician, we all work together for the greater good of Studiocode and our
+                customers. We all share the same passion for creating beautiful and Attractive products. Every team
+                member wears multiple hats to solve tough problems every day. </p>
+        </div>
+        <div class="contents">
+            <img src="{% static 'img/photography.jpg' %}" alt="">
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -100,6 +100,40 @@
             font-size: 2rem;
         }
     }
+    @media (max-width:986px) {
+    nav ul li {
+        margin-left: 0;
+        display: block;
+    }
+
+    .icon {
+        display: block;
+        color: white;
+        position: absolute;
+        right: 40px;
+        line-height: 70px;
+        font-size: 5rem;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+
+    nav ul {
+        display: none;
+        background-color: #b12a5b;
+        position: relative;
+    }
+
+    nav ul li a {
+        right: 7rem;
+        font-size: 5rem;
+        line-height: 250px;
+    }
+
+    [id^=btn-2]:checked+ul {
+        display: block;
+    }
+}
 </style>
 
 <div class="contact-form">
@@ -112,9 +146,7 @@
         <button type="submit">Login</button>
         <p>Already have an account? <a href="{% url 'd_reg' %}">Sign UP</a></p>
     </form>
-</div>
-
-
+    
 {% for i in messages %}
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script>
@@ -126,6 +158,9 @@
     )
 </script>
 {% endfor %}
+
+</div>
+
 
 
 <!--javascript file source-->
