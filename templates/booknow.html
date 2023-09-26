@@ -96,40 +96,50 @@
             font-size: 2rem;
         }
     }
-    @media (max-width:986px) {
-    nav ul li {
-        margin-left: 0;
-        display: block;
-    }
+    @media all and (max-width:986px) {
 
-    .icon {
-        display: block;
-        color: white;
-        position: absolute;
-        right: 40px;
-        line-height: 70px;
-        font-size: 5rem;
-        cursor: pointer;
-        z-index: 1001;
-    }
+nav ul {
+    margin: 0;
+    float: left;
+}
+
+nav .logo {
+    padding-left: 30px;
+    width: 100%;
+}
+
+nav ul li {
+    display: block;
+    width: 100%;
+}
+
+.icon {
+    display: block;
+    color: white;
+    position: absolute;
+    right: 40px;
+    line-height: 70px;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 1001;
+}
 
 
-    nav ul {
-        display: none;
-        background-color: #b12a5b;
-        position: relative;
-    }
+nav ul {
+    display: none;
+    background-color: #1b1b1b;
+    position: relative;
+}
 
-    nav ul li a {
-        right: 7rem;
-        font-size: 5rem;
-        line-height: 250px;
-    }
+nav ul li a {
+    right: 7rem;
+    font-size: 5rem;
+    line-height: 250px;
+}
 
-    [id^=btn-2]:checked+ul {
-        display: block;
-    }
-    
+[id^=btn-2]:checked+ul {
+    display: block;
+}
 }
 </style>
 

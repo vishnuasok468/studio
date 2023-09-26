@@ -18,8 +18,8 @@
     }
 
     .workflow .content img {
-        width: 550px;
-        height: 400px;
+        width: 460px;
+        height: auto;
         object-fit: cover;
     }
 
@@ -56,12 +56,15 @@
 
         .workflow .content .desc img {
             width: 100%;
-            height: 100%;
+            height: auto;
         }
+
         .special .content .contents {
             width: 100%;
             height: auto;
             margin: 1px;
+            text-align: left;
+            line-height: 4rem;
         }
 
 
@@ -85,10 +88,141 @@
             padding: 30px;
         }
 
+        .text-box{
+            padding: 0;
+        }
+
+        .text-box .cont {
+            width: 100%;
+            margin: 5px;
+        }
+
+        .text-box .cont h1 {
+            font-size: 5rem;
+        }
+
+        .text-box .cont p {
+            font-size: 3rem;
+            line-height: 40px;
+        }
+
+        .text-box img {
+            display: none;
+        }
+
+    }
+
+    .text-box {
+        display: flex;
+        width: 100%;
+        padding: 3rem 1rem;
+        height: auto;
+        color: #fff;
+        position: relative;
+    }
+
+    .text-box .cont {
+        width: 60%;
+        margin: 0 3rem;
+    }
+
+    .text-box p {
+        padding-left: 20px;
+        padding-bottom: 25px;
+        letter-spacing: 1.2px;
+        line-height: 30px;
+    }
+
+    .text-box h1 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 50px;
+        padding-left: 20px;
+        margin-top: 9%;
+        letter-spacing: 2px;
+    }
+
+    .text-box a {
+        padding: 1rem 3rem;
+        background-color: pink;
+        border: none;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        font-size: 18px;
+        border-radius: 10px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .text-box img {
+        width: 310px;
+        height: 430px;
+        position: relative;
+        box-shadow: 30px 20px 10px #1b1b1b;
+    }
+
+
+    @media all and (max-width:986px) {
+
+        nav ul {
+            margin: 0;
+            float: left;
+        }
+
+        nav .logo {
+            padding-left: 30px;
+            width: 100%;
+        }
+
+        nav ul li {
+            display: block;
+            width: 100%;
+        }
+
+        .icon {
+            display: block;
+            color: white;
+            position: absolute;
+            right: 40px;
+            line-height: 70px;
+            font-size: 25px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+
+        nav ul {
+            display: none;
+            background-color: #1b1b1b;
+            position: relative;
+        }
+
+        nav ul li a {
+            right: 7rem;
+            font-size: 3rem;
+            line-height: 150px;
+        }
+
+        [id^=btn-2]:checked+ul {
+            display: block;
+        }
     }
 </style>
 
-<div class="carosel reveal">
+<div class="text-box">
+    <div class="cont ">
+        <h1>we can freeze ur happy moments just by a click</h1>
+        <p> "When a moment in front of me appears to be particularly special, whether it be by beauty or experience, I
+            capture it. I usually find a reason to justify taking that photo - symmetry, or color or contrast - and it's
+            my hope that my photography sheds light onto what I see and do on a daily basis."</p>
+        <a href="{% url 'd_login' %}">Join us</a>
+    </div>
+
+
+    <img src="{% static 'img/unsplash.jpg'%}" alt="">
+
+</div>
+
+<div class="carosel">
     <div class="slider-wrapper">
         <button id="prev-slide" class="slide-btn"><i class="fa-solid fa-chevron-left"></i></button>
         <div class="image-list">
@@ -106,7 +240,9 @@
             <div class="scrollbar-thumb"></div>
         </div>
     </div>
-</div>
+</div><br><br>
+
+
 
 <div class="special reveal">
     <h2>We are Exciting to Do..</h2>
@@ -115,7 +251,7 @@
             <img src="{% static 'img/Wedding.jpeg' %}" alt="">
         </div>
         <div class="contents desc">
-            <h3>Wedding Photography</h3>
+            <h1>Wedding Photography</h1>
             <p>Being a professional wedding photographer involves an exciting mix of portraiture and event
                 photography in a wide variety of settings and groups. Wedding photography is pretty intense,
                 with
@@ -132,7 +268,7 @@
             <img src="{% static 'img/Event.jpg' %}" alt="">
         </div>
         <div class="contents desc">
-            <h3>Event Photography</h3>
+            <h1>Event Photography</h1>
             <p>In the same vein, event photography is a dynamic and fast-paced way to make a buck with your
                 camera.
                 Whether your beat is corporate events or wild and crazy rock concerts, event photographers work
@@ -148,7 +284,7 @@
             <img src="{% static 'img/portrait.jpg' %}" alt="" class="img">
         </div>
         <div class="contents desc">
-            <h3>Portrait Photography</h3>
+            <h1>Portrait Photography</h1>
             <p>Portraiture is one of the most common types of photographer that we think of when we consider
                 career
                 options. The kinds of photography that can be included in portraits is astounding. Retail
@@ -168,7 +304,7 @@
             <img src="{% static 'img/product.jpg' %}" alt="">
         </div>
         <div class="contents desc">
-            <h3>Product Photography</h3>
+            <h1>Product Photography</h1>
             <p>1234Product photography covers a lot of ground. Food photography is a specialized niche, and
                 restaurants
                 need to advertise their meals and create their menus. Jewelry is another favorite type of

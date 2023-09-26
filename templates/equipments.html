@@ -11,51 +11,66 @@
             height: auto;
             margin: 1px;
         }
+
         .special .content .contents img {
             width: 100%;
             height: auto;
         }
     }
+
     @media (max-width:986px) {
-    nav ul li {
-        margin-left: 0;
-        display: block;
-    }
-
-    .icon {
-        display: block;
-        color: white;
-        position: absolute;
-        right: 40px;
-        line-height: 70px;
-        font-size: 5rem;
-        cursor: pointer;
-        z-index: 1001;
-    }
 
 
-    nav ul {
-        display: none;
-        background-color: #b12a5b;
-        position: relative;
-    }
+        nav ul {
+            margin: 0;
+            float: right;
+        }
 
-    nav ul li a {
-        right: 7rem;
-        font-size: 5rem;
-        line-height: 250px;
-    }
+        nav .logo {
+            padding-left: 30px;
+            width: 100%;
+        }
 
-    [id^=btn-2]:checked+ul {
-        display: block;
+        nav ul li {
+            margin-bottom: 0;
+            display: block;
+            width: 100%;
+        }
+
+        .icon {
+            display: block;
+            color: white;
+            position: absolute;
+            right: 40px;
+            line-height: 70px;
+            font-size: 25px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+
+        nav ul {
+            display: none;
+            background-color: #1b1b1b;
+            position: relative;
+        }
+
+        nav ul li a {
+            right: 7rem;
+            font-size: 5rem;
+            line-height: 250px;
+        }
+
+        [id^=btn-2]:checked+ul {
+            display: block;
+        }
     }
-}
 </style>
 
 
-<div class="special reveal">
+<div class="special">
     <h2>We are Playing With..</h2>
-    <div class="content reveal">
+    <div class="content">
         <div class="contents">
             <img src="{% static 'img/sonya7.jpg' %}" alt="">
         </div>

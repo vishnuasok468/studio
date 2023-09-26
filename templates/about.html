@@ -9,18 +9,70 @@
             height: auto;
             margin: 1px;
         }
+
         .special .content .contents img {
             width: 100%;
             height: auto;
+        }
+
+       .unlist{
+        padding: 30px;
+        font-size: 14px;
+       }
+    }
+
+    @media all and (max-width:986px) {
+
+        nav ul {
+            margin: 0;
+            float: left;
+        }
+
+        nav .logo {
+            padding-left: 30px;
+            width: 100%;
+        }
+
+        nav ul li {
+            display: block;
+            width: 100%;
+        }
+
+        .icon {
+            display: block;
+            color: white;
+            position: absolute;
+            right: 40px;
+            line-height: 70px;
+            font-size: 25px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+
+        nav ul {
+            display: none;
+            background-color: #1b1b1b;
+            position: relative;
+        }
+
+        nav ul li a {
+            right: 7rem;
+            font-size: 5rem;
+            line-height: 250px;
+        }
+
+        [id^=btn-2]:checked+ul {
+            display: block;
         }
     }
 </style>
 
 
 
-<div class="special reveal">
+<div class="special">
     <h2>About us</h2>
-    <div class="content reveal">
+    <div class="content">
 
         <div class="contents desc">
             <h3>Our story</h3>
@@ -47,15 +99,17 @@
             <h3>Our Culture & Values</h3>
             <p>We are creators first, business-people second. We are constantly creating and refining our products with
                 care and focus. These are some of the values that we live by and pride ourselves in.
-            <ul>
-                <li>Craftsmanship at the heart of everything</li>
-                <li>Simple solutions to complex challenges.</li>
-                <li>Build a positive and happy environment.</li>
-                <li>Do the right thing and produce awesome work.</li>
-                <li>Communicate with honesty and respect.</li>
-                <li>Focus on growth and learning.</li>
-                <li>Live smart, and have fun. </li>
-            </ul>
+            <div class="unlist">
+                <ul>
+                    <li>Craftsmanship at the heart of everything</li>
+                    <li>Simple solutions to complex challenges.</li>
+                    <li>Build a positive and happy environment.</li>
+                    <li>Do the right thing and produce awesome work.</li>
+                    <li>Communicate with honesty and respect.</li>
+                    <li>Focus on growth and learning.</li>
+                    <li>Live smart, and have fun. </li>
+                </ul>
+            </div>
             </p>
         </div>
     </div>
@@ -63,7 +117,8 @@
 
         <div class="contents desc">
             <h3>Small Team.Big Impact</h3>
-            <p>The Studiocode team is a small, tight-knit group of talented individuals. No matter if you are a Cameraman,
+            <p>The Studiocode team is a small, tight-knit group of talented individuals. No matter if you are a
+                Cameraman,
                 Editor, or a Light Technician, we all work together for the greater good of Studiocode and our
                 customers. We all share the same passion for creating beautiful and Attractive products. Every team
                 member wears multiple hats to solve tough problems every day. </p>
