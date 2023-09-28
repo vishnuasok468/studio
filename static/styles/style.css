@@ -292,8 +292,11 @@ footer p {
 
     footer .foot {
         width: 100%;
-        font-size: 20px;
         padding: 5px;
+    }
+
+    footer .foot h4{
+        font-size: 3rem;
     }
 
     footer .side {

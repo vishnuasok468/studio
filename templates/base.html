@@ -29,7 +29,8 @@
 
         nav {
             width: 100%;
-            background: #1b1b1b;
+            background: #8B2F8A;
+            height: auto;
         }
 
         nav:after {
@@ -48,7 +49,7 @@
         nav ul li {
             float: left;
             display: inline-block;
-            background: #1b1b1b;
+            background: #8B2F8A;
             margin: 0 5px;
         }
 
@@ -59,9 +60,10 @@
             font-size: 18px;
             padding: 8px 15px;
         }
-        nav ul li a:hover{
-            box-shadow: 0 0 5px #784BA0, 0 0 5px #FF3CAC;
-           
+
+        nav ul li a:hover {
+            box-shadow: 0 0 5px #1b1b1b;
+
         }
 
         nav .logo {
@@ -73,9 +75,10 @@
             line-height: 70px;
             padding-left: 60px;
         }
-        nav .logo img{
+
+        nav .logo img {
             position: relative;
-            width: 400px;
+            width: 300px;
         }
 
         @media all and (max-width:986px) {
@@ -86,8 +89,12 @@
             }
 
             nav .logo {
-                padding-left: 30px;
+                margin-left: 0;
                 width: 100%;
+            }
+
+            nav .logo img {
+                width: 800px;
             }
 
             nav ul li {
@@ -100,28 +107,46 @@
                 color: white;
                 position: absolute;
                 right: 40px;
-                line-height: 70px;
-                font-size: 25px;
+                line-height: 220px;
+                font-size: 5rem;
                 cursor: pointer;
                 z-index: 1001;
             }
 
 
+
             nav ul {
                 display: none;
-                background-color: black;
+                background-color: #8B2F8A;
                 position: relative;
             }
 
             nav ul li a {
                 right: 7rem;
-                font-size: 0.75rem;
-                line-height: 250px;
+                font-size: 3rem;
+                line-height: 150px;
             }
 
             [id^=btn-2]:checked+ul {
                 display: block;
             }
+
+            footer .foot h4 {
+                font-size: 4rem;
+            }
+
+            footer .foot a {
+                font-size: 3.5rem;
+            }
+
+            footer .foot p {
+                font-size: 3rem;
+            }
+
+            nav .logo {
+                font-size: 5rem;
+            }
+
         }
     </style>
 </head>
@@ -131,8 +156,8 @@
 
     <nav>
         <div class="logo">
-            <p>Studiocode</p>
-            
+            <img src="{% static 'img/logo-removebg-preview.png' %}" alt="">
+
         </div>
         <label for="btn-2" class="icon">
             <span class="fa fa-bars"></span>
@@ -194,7 +219,7 @@
                 <p>UNIT B,</p>
                 <p>kochi</p>
             </div>
-        </div>
+        </div><br>
 
 
         <a href="">Terms & conditions</a><a href="">Privacy & Policies</a>
